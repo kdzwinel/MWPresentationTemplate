@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+
+  Making Waves template: Konrad Dzwinel
+  URL:
+-->
+
+<html>
+  <head>
+    <title>Presentation</title>
+
+    <meta charset='utf-8'>
+
+    <!-- Main JS file from html5slides project, you should probably don't touch it -->
+    <script src="resources/libs/slides.js"></script>
+    <!-- jQuery - it's not required, if you don't need it - remove it -->
+    <script src="resources/libs/jquery.js"></script>
+
+    <!-- Main CSS file from html5slides project - again, don't touch this stuff -->
+    <link rel="stylesheet"  href='resources/styles.css'>
+    <!-- Some nice icons - check them out: http://shoestrap.org/downloads/elusive-icons-webfont/ -->
+    <link rel="stylesheet" href="resources/elusive-webfont/css/elusive-webfont.css">
+    <!-- Making Waves specific styles -->
+    <link rel="stylesheet" href="resources/mw-template.css">
+  </head>
+
+  <body style='display: none'>
+
+    <!-- This is main container, you can change presentation layout by changing layout-regular to layout-faux-widescreen or layout-widescreen.-->
+    <section class='slides layout-regular'>
+
+      <!-- First slide with big MW logo -->
+      <article class='biglogo'></article>
+
+      <!-- Title slide -->
+      <article class="title_slide">
+        <h1>This is a title</h1>
+        <h2>and here comes the subtitle <span class="pink">.</span></h2>
+
+        <p>
+          Author Name
+          <br />
+          July 01, 2013
+        </p>
+      </article>
+
+      <!-- EXAMPLES -->
+      <!-- some options for all slides:
+        - add class "smaller" to <article> if you prefer smaller text
+        - add class "nologo" to <article> to remove MW logo from lower-rigth corner
+        - add class "pink" to anything to get MW pink on text
+      -->
+      <!-- EXAMPLE 1: Slide with some text, bullet points and image -->
+      <article>
+          <h3>Slide title</h3>
+          <p>Some interesting info about cats:</p>
+          <!-- Note class "build" used here it indicates that each point of this list requires action before showing up -->
+          <ul class="build">
+              <li>They are cute and furry</li>
+              <li>They eat only good food and require diverse diet</li>
+              <li>They feel superior to people</li>
+              <li>
+                  <!-- adding images can't be simpler -->
+                  <img src="http://html5slides.googlecode.com/svn/trunk/template/images/example-cat.jpg" style='height: 200px'/>
+              </li>
+          </ul>
+      </article>
+
+      <!-- EXAMPLE 2: Slide with some code -->
+      <article>
+          <h3>Slide title</h3>
+          <p>Code bellow is pretty interesting:</p>
+          <!-- You will get syntax highlighting for free! -->
+          <pre>
+int randomNumber() {
+    return 4; // chosen by fair dice roll.
+              // guaranteed to be random.
+}</pre>
+          <p>But if you wish to only mention small part of it use this: <code>randomNumber()</code></p>
+      </article>
+
+      <!-- EXAMPLE 3: Slide with table -->
+      <article>
+          <h3>Tables are exciting</h3>
+          <p>Buying/adopting a cat:</p>
+          <table>
+              <tbody>
+              <tr>
+                <th>
+                    Pros
+                </th>
+                <th>
+                    Cons
+                </th>
+              </tr>
+              <tr>
+                  <td>
+                    making pictures and sharing them on facebook
+                  </td>
+                  <td>
+                    it will hate me
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      I can play with it and pet it
+                  </td>
+                  <td>
+                      I will take numerous wounds
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+          <p>My advice: <strong class="pink">get a dog</strong></p>
+      </article>
+
+      <!-- EXAMPLE 4: Customization and JS -->
+      <!-- onslideenter attribute allows you to run some JS code whenever slide is loaded
+        similarly onslideleave will run your code when slide is unloaded
+      -->
+      <article onslideenter="slideLoaded()">
+          <!-- Custom JS -->
+          <script>
+              function slideLoaded() {
+                  alert('This slide is ready!');
+              }
+          </script>
+          <!-- Custom CSS -->
+          <style>
+            .custom {
+                color: gold;
+                font-size: 150%;
+            }
+
+            .my-iframe {
+                height: 400px;
+                margin-top: 20px;
+            }
+          </style>
+
+          <h3>PRO usage of slides</h3>
+          <p>This is something <span class="custom">custom</span></p>
+
+          <!-- embedding stuff? why not -->
+          <iframe class="my-iframe" src="https://www.youtube.com/embed/dhUFxaauNTE" frameborder="0" allowfullscreen></iframe>
+      </article>
+
+      <!-- Thank you slide -->
+      <article class='thank_you_slide'>
+        <h2><span class="icon icon-smiley-alt pink"></span> Thank You!</h2>
+        <div class='contact_me'>
+          <!-- if you don't like icons used here you can easily change them by changing class names - see http://shoestrap.org/downloads/elusive-icons-webfont/ -->
+          <span class="icon icon-pencil-alt"></span> <a href='mailto:you@makingwaves.pl'>you@makingwaves.pl</a><br/>
+          <span class="icon icon-github"></span> <a href='https://github.com/you'>you</a><br/>
+          <span class="icon icon-paper-clip"></span> <a href='http://goo.gl/your-short-url-to-this-presentation'>goo.gl/your-short-url-to-this-presentation</a></span>
+        </div>
+      </article>
+
+      <!-- Slide with an inspiring quote -->
+      <article id='quote_slide'>
+        <q>
+          With great power there must also come great responsibility!
+        </q>
+        <div class='author'>
+          Stan Lee
+        </div>
+      </article>
+
+    </section>
+
+    <script>
+        (function() {
+            //makes all links open in a separate tab/window
+            var allLinks = document.querySelectorAll('body a');
+            for(var i= 0, l=allLinks.length; i<l; i++){
+                allLinks.item(i).setAttribute('target', '_blank');
+            }
+        })();
+    </script>
+  </body>
+</html>

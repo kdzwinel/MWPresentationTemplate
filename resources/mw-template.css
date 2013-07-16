@@ -1,0 +1,29 @@
+article:not(.nologo) {
+	background: white url(logo/horizontal.png) 687px 630px no-repeat;
+}
+
+article.biglogo {
+	background: white url(logo/bluppen_full.png) center center no-repeat;
+}
+
+article.title_slide h2{
+	position: static;
+	bottom: auto;
+}
+
+iframe {
+	height: 550px;
+}
+
+h3 + iframe {
+	height: 500px;
+}
+
+.contact_me a, .contact_me a:visited, .slides > article.problem .contact_me .icon{
+	color: black;
+	font-size: 75%;
+}
+
+.pink {
+	color: rgb(244, 58, 109); /* this is our official pink color */
+}
